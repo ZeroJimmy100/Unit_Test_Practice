@@ -9,4 +9,14 @@ class TestRearrange(unittest.TestCase):
         expected = "Ada Lovelace"
         self.assertEqual(rearrange_name(testcase), expected)
 
+    # This produce an error because the method is not doing what
+    # it is suppose to output, therefore it created an edge case
+    # meaning the input has produce an unexpected results and are found 
+    # at the extreme ends of the ranges of input we imagine our programs
+    # will typically work with
+    def test_empty(self):
+        testcase = ""
+        expected = ""
+        self.assertEqual(rearrange_name(testcase), expected)
+
 unittest.main()
